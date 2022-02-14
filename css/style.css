@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Roboto+Mono:wght@100;200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto Mono", monospace;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  justify-content: center;
+  align-items: center;
+}
+header h2 {
+  padding: 2rem;
+}
+#logo {
+  text-decoration: none;
+  color: black;
+}
+.search-form {
+  padding: 2rem;
+  display: flex;
+}
+.search-form input {
+  padding: 0.5rem;
+  font-size: 2rem;
+  width: 100%;
+  border: none;
+  border: 2px solid rgb(14, 24, 80);
+}
+
+.search-form button {
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: rgb(14, 24, 80);
+  color: white;
+  cursor: pointer;
+}
+
+.gallery-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* color: gray; */
+  color: white;
+  padding: 0.5rem 0rem;
+}
+.gallery-info a {
+  /* color: gray; */
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  padding: 2rem 0rem;
+  width: 80%;
+  margin: auto;
+  row-gap: 5rem;
+  column-gap: 3rem;
+}
+
+.gallery-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-btn {
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.more {
+  padding: 1rem 2rem;
+  background: rgb(14, 24, 80);
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.fig {
+  /* width: 500px; */
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.fig:hover::before {
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+.fig::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #006266;
+  opacity: 0.5;
+  transform: translateY(100%);
+  transition: all 0.25s ease-in-out;
+  transition-delay: 0.25s;
+}
+
+.fig .caption {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+.fig:hover .caption {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.fig h3,
+.fig h5 {
+  margin: 0;
+  letter-spacing: 1px;
+}
+.fig h3 {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+.fig h5 {
+  background-color: #ae895d;
+  padding: 3px 5px;
+}
